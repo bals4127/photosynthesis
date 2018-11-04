@@ -1,4 +1,4 @@
-inst/doc
-packrat/lib*/
 .Rproj.user
-packrat/src/
+.Rhistory
+.RData
+.Ruserdata
