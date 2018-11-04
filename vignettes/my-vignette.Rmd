@@ -1,0 +1,35 @@
+---
+title: "package 'photosynthesis'"
+author: "Balasaheb V Sonawane"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+**Type** Package
+
+**Title** Cleanning, analysing and modelling leaf gas exchange data.
+
+**Description** Read and clean raw csv files from Li6400 leaf gas exchange system and online isotope data files from TDLMS.
+
+**VignetteBuilder** knitr
+
+**Author** Balasaheb V Sonawane [aut, cre]
+
+**Maintainer** Balasaheb Sonawane <balasahebsonawane@gmail.com>
+
+**Repository** CRAN
+
+**Date/Publication**  "`r Sys.Date()`"
+
+
+***
+read.li6400():    Read and clean raw csv output file from Li6400.
+
+***
+
+
+

@@ -1,0 +1,15 @@
+Package: photosynthesis
+Type: Package
+Title: Modelling C3 and C4 photosynthesis
+Version: 0.1.0
+Author: Balasaheb V Sonawane
+Maintainer: Balasaheb V Sonawane <balasahebsonawane@gmail.com>
+Description: Reads and arranges data files from mostly used instruments in the photsynthesis field e.g.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: lubridate(>= 1.7.4)
+RoxygenNote: 6.1.0
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
