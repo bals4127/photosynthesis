@@ -2,7 +2,7 @@
 % Please edit documentation in R/read_li6400.R
 \name{read.li6400}
 \alias{read.li6400}
-\title{Read LI6400 file from csv format.}
+\title{Read and clean LI6400 file from csv format.}
 \usage{
 read.li6400(file_path)
 }
@@ -10,8 +10,8 @@ read.li6400(file_path)
 \item{file_path}{path of Li6400 csv file.}
 }
 \value{
-Read and clean csv output of Li6400 system. Adds Li6400 name, measurment date and Remarks (with respective observation log) as an extra column
+Read and clean csv file made from output of Li6400 gas-exchange system. Adds Li6400 name, measurment date and Remarks (with respective observation log) as an extra column.
 }
 \description{
-Reads Li6400 file from csv format, removes unnessory coulmn, adds Li6400 name, measurment data and remarks in separate column.
+Reads and clean Li6400 file from csv format, removes unnessory coulmn, adds Li6400 name, measurment data and remarks in separate column.
 }

@@ -1,8 +1,8 @@
-#' @title Read LI6400 file from csv format.
+#' @title Read and clean LI6400 file from csv format.
 #'
-#' @description Reads Li6400 file from csv format, removes unnessory coulmn, adds Li6400 name, measurment data and remarks in separate column.
+#' @description Reads and clean Li6400 file from csv format, removes unnessory coulmn, adds Li6400 name, measurment data and remarks in separate column.
 #' @param file_path path of Li6400 csv file.
-#' @return Read and clean csv output of Li6400 system. Adds Li6400 name, measurment date and Remarks (with respective observation log) as an extra column
+#' @return Read and clean csv file made from output of Li6400 gas-exchange system. Adds Li6400 name, measurment date and Remarks (with respective observation log) as an extra column.
 #' @export
 #' @importFrom lubridate mdy_hms
 #' @importFrom utils read.csv
