@@ -1,6 +1,6 @@
 Package: photosynthesis
 Type: Package
-Title: Leaf phosynthesis: Data cleaning, computations and C3 and C4 modelling.
+Title: Leaf phosynthesis: Data cleaning, computations and C3 and C4 modelling
 Version: 0.1.0
 Author: Balasaheb V Sonawane
 Maintainer: Balasaheb V Sonawane <balasahebsonawane@gmail.com>
