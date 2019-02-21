@@ -1,4 +1,4 @@
-#' @title Read, clean and compute C and O isotopic discrimination from TDL output file.
+#' @title Reads and cleans data from TDL output file (.dat).
 #'
 #' @description Read, clean and compute C and O isotopic discrimination from TDL output file.
 #' @param file_path file path for TDl .dat file.

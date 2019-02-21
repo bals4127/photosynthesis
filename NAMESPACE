@@ -3,4 +3,7 @@
 export(read.li6400)
 export(read.tdl)
 importFrom(lubridate,mdy_hms)
+importFrom(lubridate,parse_date_time)
+importFrom(lubridate,with_tz)
 importFrom(utils,read.csv)
+importFrom(utils,read.delim)

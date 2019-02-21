@@ -2,7 +2,7 @@
 % Please edit documentation in R/read_tdl.R
 \name{read.tdl}
 \alias{read.tdl}
-\title{Read, clean and compute C and O isotopic discrimination from TDL output file.}
+\title{Reads and cleans data from TDL output file (.dat).}
 \usage{
 read.tdl(file_path)
 }

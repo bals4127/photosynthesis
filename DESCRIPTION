@@ -4,7 +4,7 @@ Title: Leaf phosynthesis: Data cleaning, computations and C3 and C4 modelling
 Version: 0.1.0
 Author: Balasaheb V Sonawane
 Maintainer: Balasaheb V Sonawane <balasahebsonawane@gmail.com>
-Description: Read, clean and organise raw data files from mostly used instruments in the photsynthesis field, including Li6400, TDL and Piccaro.
+Description: Read, clean and process raw data files from mostly used instruments in the photsynthesis research, including Li6400,Li6800, TDL and Piccaro.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
