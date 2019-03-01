@@ -74,7 +74,7 @@ leakiness_hl<- function(data, varnames= c(unique_id= "unique_id",Anet= "Photo", 
   ap_d<-  (Ca_Pa- Ci_Pa)
   ap<- ((ap_n/ap_d)-1)*1000
   b4_prime<-  (-(9.483*1000)/ (273 + Tleaf) ) + 23.89 +2.2
-  b4_bar<-  b4_prime - (e*0.5* Rd)/(Photo+ 0.5* Rd)
+  b4_bar<-  b4_prime - (eprime*0.5* Rd)/(Photo+ 0.5* Rd)
   #calculate b3p
   b3_bar<- b3 - eprime*((Rd/(Photo+Rd)) - (0.5* Rd/(Photo + 0.5 * Rd)))
   ##caculate ternary term
