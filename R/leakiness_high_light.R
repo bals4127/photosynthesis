@@ -48,6 +48,7 @@
 #' von Caemmerer S, Ghannoum O, Pengelly JJL, Cousins AB (2014) Carbon isotope discrimination as a tool to explore C4 photosynthesis. J Exp Bot 65: 3459–3470.
 #'
 #' Farquhar G (1983) On the nature of carbon isotope discrimination in C4 species. Functional Plant Biol 10: 205–226
+#' @export
 leakiness_hl<- function(data, varnames= c(unique_id= "unique_id",Anet= "Photo", Rd = "Rd", CibyCa= "Ci.Ca", gm= "gm",
                                       D13= "D13", Ci_Pa= "Ci_Pa", Ca_Pa= "Ca_Pa", CL_Pa= "CL_Pa",
                                       E= "E", Cond_CO2 = "CndCO2", Tleaf= "Tleaf" ,d13_growth_air= "dgrowth_air",

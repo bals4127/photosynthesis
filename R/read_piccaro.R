@@ -6,6 +6,7 @@
 #' @importFrom lubridate with_tz
 #' @importFrom lubridate parse_date_time
 #' @importFrom utils read.delim
+#' @export
 read.picarro <- function (file_path) {
     picarro_in <- read.delim(file_path , sep = "",header = T)
     options(digits.secs = 3)
