@@ -51,19 +51,19 @@ Eqn referes to Ubierna et al., 2018 (See references).
 \details{
 List of variables and their units need to suply in \code{varnames}.
 \code{unique_id}{: This is a unique id for each row. Makes easy to combine output with other dataframes.}
-\code{Anet}{: Net rate of CO2 assimilation; umol m^-2s^-1}
-\code{Rd}{: Rate of respiration in light; umol m^-2s^-1}
-\code{CibyC}{: Ratio of intercelluar CO2 concentration to the ambient}
-\code{gm}{: Measoplyll cell CO2 conductance' umol m^-2s^-1 Pa^-1}
-\code{D13}{: Observed 13C photsynthetic discrimination (Eqn5); ‰}
-\code{Ci_pa}{: CO2 partial pressure inside the leaf; Pa}
-\code{Ca_Pa}{: CO2 partial pressure in the ambient air; Pa}
-\code{CL_Pa}{: CO2 partial pressure at the leaf surface; Pa}
-\code{E}{: Transpiration rate; mol m^-2s^-1}
-\code{Cond_CO2}{: Total cOnductance to diffusion of CO2 in air; mol m^-2 s^-1}
-\code{Tleaf}{: Leaf temperature; degree C}
-\code{d13_growth_air}{: delta13C of the CO2 at the plant growth environment}
-\code{d13_measureair}{: delta13C of the CO2 in the air used during gas-exchange measurement (Licor reference line) }
+\code{Anet}{: Net rate of CO2 assimilation; umol m^-2s^-1,}
+\code{Rd}{: Rate of respiration in light; umol m^-2s^-1,}
+\code{CibyC}{: Ratio of intercelluar CO2 concentration to the ambient,}
+\code{gm}{: Measoplyll cell CO2 conductance' umol m^-2s^-1 Pa^-1,}
+\code{D13}{: Observed 13C photsynthetic discrimination (Eqn5); ‰,}
+\code{Ci_Pa}{: CO2 partial pressure inside the leaf; Pa,}
+\code{Ca_Pa}{: CO2 partial pressure in the ambient air; Pa,}
+\code{CL_Pa}{: CO2 partial pressure at the leaf surface; Pa,}
+\code{E}{: Transpiration rate; mol m^-2s^-1,}
+\code{Cond_CO2}{: Total conductance to diffusion of CO2 in air; mol m^-2 s^-1,}
+\code{Tleaf}{: Leaf temperature; degree C,}
+\code{d13_growth_air}{: delta13C of the CO2 at the plant growth environment,}
+\code{d13_measureair}{: delta13C of the CO2 in the air used during gas-exchange measurement (Licor reference line).}
 }
 \references{
 Ubierna N, Holloway-Phillips M-M, Farquhar GD (2018) Using Stable Carbon Isotopes to

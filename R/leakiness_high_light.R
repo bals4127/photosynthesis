@@ -41,9 +41,6 @@
 #' \code{d13_growth_air}{: delta13C of the CO2 at the plant growth environment,}
 #' \code{d13_measureair}{: delta13C of the CO2 in the air used during gas-exchange measurement (Licor reference line).}
 #'
-#'
-#'
-#'
 #' @references
 #' Ubierna N, Holloway-Phillips M-M, Farquhar GD (2018) Using Stable Carbon Isotopes to
 #' Study C3 and C4 Photosynthesis: Models and Calculations. In S Covshoff, ed, Photosynthesis: Methods and Protocols. Springer New York, New York, NY, pp 155–196
@@ -51,8 +48,6 @@
 #' von Caemmerer S, Ghannoum O, Pengelly JJL, Cousins AB (2014) Carbon isotope discrimination as a tool to explore C4 photosynthesis. J Exp Bot 65: 3459–3470.
 #'
 #' Farquhar G (1983) On the nature of carbon isotope discrimination in C4 species. Functional Plant Biol 10: 205–226
-
-
 leakiness_hl<- function(data, varnames= c(unique_id= "unique_id",Anet= "Photo", Rd = "Rd", CibyCa= "Ci.Ca", gm= "gm",
                                       D13= "D13", Ci_Pa= "Ci_Pa", Ca_Pa= "Ca_Pa", CL_Pa= "CL_Pa",
                                       E= "E", Cond_CO2 = "CndCO2", Tleaf= "Tleaf" ,d13_growth_air= "dgrowth_air",
