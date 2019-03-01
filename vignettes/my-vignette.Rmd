@@ -28,6 +28,8 @@ vignette: >
 
 ***
 read.li6400():    Read and clean raw csv output file from Li6400.
+read.picarro():    Read and clean raw csv output file from Picarro.
+leakines_hl(): Calculatate leakiness under high light assumptions.
 
 ***
 

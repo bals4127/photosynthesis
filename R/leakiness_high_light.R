@@ -51,8 +51,7 @@
 leakiness_hl<- function(data, varnames= c(unique_id= "unique_id",Anet= "Photo", Rd = "Rd", CibyCa= "Ci.Ca", gm= "gm",
                                       D13= "D13", Ci_Pa= "Ci_Pa", Ca_Pa= "Ca_Pa", CL_Pa= "CL_Pa",
                                       E= "E", Cond_CO2 = "CndCO2", Tleaf= "Tleaf" ,d13_growth_air= "dgrowth_air",
-                                      d13_measure_air = "d13.31",...), e= 0,a=4.4, b3=29, s=1.8, ab=2.9,am= 1.8,...)
-{## mKe new dataframe with varible names to avoid error due to different user names
+                                      d13_measure_air = "d13.31"), e= 0,a=4.4, b3=29, s=1.8, ab=2.9,am= 1.8,...){## mKe new dataframe with varible names to avoid error due to different user names
   unique_id<- data[, varnames[["unique_id"]]]
   Photo<- data[, varnames[["Anet"]]]
   Rd<- data[, varnames[["Rd"]]]
@@ -78,10 +77,11 @@ leakiness_hl<- function(data, varnames= c(unique_id= "unique_id",Anet= "Photo", 
   #calculate b3p
   b3_bar<- b3 - eprime*((Rd/(Photo+Rd)) - (0.5* Rd/(Photo + 0.5 * Rd)))
   ##caculate ternary term
-  t<-   (1+ap/1000)* E / (2 * Cond_CO2)
+  t<-(1+ap/1000)* E / (2 * Cond_CO2)
   by_t<- 1/(1+t)
   cal_t<- (1-t)/(1+t)
   ### Calculate leakines using high light assumptions
   leak<-  (cal_t*D13-by_t*ap- (am- b4_bar)*(Photo/(Ca_Pa * gm))-(b4_bar- ap/(1+t))*Ci.Ca )/((b3_bar-s)*(Ci.Ca- Photo/(Ca_Pa*gm)))
   out_data<- data.frame(unique_id= unique_id,e_prime= eprime,a_prime= ap,b4_bar= b4_bar, b3_bar= b3_bar, t= t,leakiness=leak)
-  return(out_data)}
+  return(out_data)
+  }
