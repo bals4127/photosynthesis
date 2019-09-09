@@ -168,7 +168,7 @@ cal_tdl<- function(dat, site_line_seq_1= c(20,21,22,23,3,7,8),
   }
   assn_id <- assign_id(dat, site_seq= site_line_seq_1)
   non_assn<- droplevels(subset(assn_id, grpid== 0 ))
-  if(nrow(non_assn)>10){
+  if(nrow(non_assn)>20){
     warning("You have different site sequence,make sure site_line_seq_1 and site_line_seq_2 are correct,
             if you are sure ingore this message!!!")
     assn_2 <- assign_id(dat= non_assn, site_seq= site_line_seq_2)
