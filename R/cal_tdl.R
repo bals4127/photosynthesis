@@ -191,7 +191,7 @@ cal_tdl<- function(dat, site_line_seq_1= c(20,21,22,23,3,7,8),
     assn <- droplevels(subset(assn_id, grpid > 0 ))
     zero_cal<- ddply(assn, "grpid", fun=sub_zero)
     gain_cal<- ddply(zero_cal, "grpid",fun=fun_gain)
-    correct_c<- ddply(gain_cal, "grpid",.fun=corr_cal_c)
+    correct_c<- ddply(gain_cal, "grpid", fun=corr_cal_c)
     isotope<- grouprecs(correct_c)}
   l <- list()
   l$isotope<- isotope [order(isotope$DateTime),]
