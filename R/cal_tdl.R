@@ -19,7 +19,6 @@
 #' @param Rvpdb_C the 13C/12C ratio of the reference standard, PDB
 #' @param Rvpdb_O the 18O/16O ratio of the reference standard, PDB
 #' @param R18Osmow the 18O/16O ratio of the reference standard, SMOW
-#' @param . ddply function parameater
 #' @return Lists with raw calcuations, clean output for discrimination and caliberations used in the calculations.
 #' @importFrom plyr ddply
 #' @importFrom stats reshape
@@ -156,7 +155,7 @@ cal_tdl<- function(dat, site_line_seq_1= c(20,21,22,23,3,7,8),
 
     dfab1<-reshape(dfab[,c("DateTime","grpid","SiteOutput","corr12","corr13","d13", "d18","tmf_13CO2","tmf_C18OO")],
                    v.names=c("corr12","corr13","d13", "d18", "tmf_13CO2","tmf_C18OO"  ),
-                   idvar="grpid",ids="DateTime",timevar="SiteOutput",direction="wide")
+                   idvar="grpid",ids="DateTime", timevar="SiteOutput", direction="wide")
     # dfab$p<-dfab$tmf.19/(dfab$tmf.19-dfab$tmf.20)
     dfab1$p<-dfab1$tmf_13CO2.Lic_ref/(dfab1$tmf_13CO2.Lic_ref-dfab1$tmf_13CO2.Lic_samp)
     dfab1$p18O<-dfab1$tmf_C18OO.Lic_ref/(dfab1$tmf_C18OO.Lic_ref-dfab1$tmf_C18OO.Lic_samp)
@@ -176,22 +175,22 @@ cal_tdl<- function(dat, site_line_seq_1= c(20,21,22,23,3,7,8),
     assn_2 <- assn_2[assn_2$grpid > 0, ]
     assn_1 <- droplevels(subset(assn_id, grpid > 0 ))
 
-    zero_cal_1<- ddply(assn_1, "grpid", fun=sub_zero)
-    gain_cal_1<- ddply(zero_cal_1, "grpid",fun=fun_gain)
-    correct_c_1<- ddply(gain_cal_1, "grpid", fun=corr_cal_c)
+    zero_cal_1<- ddply(assn_1, "grpid", .fun=sub_zero)
+    gain_cal_1<- ddply(zero_cal_1, "grpid",.fun=fun_gain)
+    correct_c_1<- ddply(gain_cal_1, "grpid", .fun=corr_cal_c)
     isotope_1<- grouprecs(correct_c_1)
 
-    zero_cal_2<- ddply(assn_2, "grpid", fun=sub_zero)
-    gain_cal_2<- ddply(zero_cal_2, "grpid",fun=fun_gain)
-    correct_c_2<- ddply(gain_cal_2,"grpid",fun=corr_cal_c)
+    zero_cal_2<- ddply(assn_2, "grpid", .fun=sub_zero)
+    gain_cal_2<- ddply(zero_cal_2, "grpid",.fun=fun_gain)
+    correct_c_2<- ddply(gain_cal_2,"grpid",.fun=corr_cal_c)
     isotope_2<- grouprecs(correct_c_2)
     isotope<- rbind(isotope_1, isotope_2)
     correct_c<- rbind(correct_c_1, correct_c_2)}
   else{
     assn <- droplevels(subset(assn_id, grpid > 0 ))
-    zero_cal<- ddply(assn, "grpid", fun=sub_zero)
-    gain_cal<- ddply(zero_cal, "grpid",fun=fun_gain)
-    correct_c<- ddply(gain_cal, "grpid", fun=corr_cal_c)
+    zero_cal<- ddply(assn, "grpid", .fun=sub_zero)
+    gain_cal<- ddply(zero_cal, "grpid", .fun=fun_gain)
+    correct_c<- ddply(gain_cal, "grpid", .fun=corr_cal_c)
     isotope<- grouprecs(correct_c)}
   l <- list()
   l$isotope<- isotope [order(isotope$DateTime),]
