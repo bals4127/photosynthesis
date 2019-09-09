@@ -176,22 +176,22 @@ cal_tdl<- function(dat, site_line_seq_1= c(20,21,22,23,3,7,8),
     assn_2 <- assn_2[assn_2$grpid > 0, ]
     assn_1 <- droplevels(subset(assn_id, grpid > 0 ))
 
-    zero_cal_1<- ddply(assn_1, .(grpid), .fun=sub_zero)
-    gain_cal_1<- ddply(zero_cal_1, .(grpid), .fun=fun_gain)
-    correct_c_1<- ddply(gain_cal_1, .(grpid), .fun=corr_cal_c)
+    zero_cal_1<- ddply(assn_1, "grpid", fun=sub_zero)
+    gain_cal_1<- ddply(zero_cal_1, "grpid",fun=fun_gain)
+    correct_c_1<- ddply(gain_cal_1, "grpid", fun=corr_cal_c)
     isotope_1<- grouprecs(correct_c_1)
 
-    zero_cal_2<- ddply(assn_2, .(grpid), .fun=sub_zero)
-    gain_cal_2<- ddply(zero_cal_2, .(grpid), .fun=fun_gain)
-    correct_c_2<- ddply(gain_cal_2, .(grpid), .fun=corr_cal_c)
+    zero_cal_2<- ddply(assn_2, "grpid", fun=sub_zero)
+    gain_cal_2<- ddply(zero_cal_2, "grpid",fun=fun_gain)
+    correct_c_2<- ddply(gain_cal_2,"grpid",fun=corr_cal_c)
     isotope_2<- grouprecs(correct_c_2)
     isotope<- rbind(isotope_1, isotope_2)
     correct_c<- rbind(correct_c_1, correct_c_2)}
   else{
     assn <- droplevels(subset(assn_id, grpid > 0 ))
-    zero_cal<- ddply(assn, .(grpid), .fun=sub_zero)
-    gain_cal<- ddply(zero_cal, .(grpid), .fun=fun_gain)
-    correct_c<- ddply(gain_cal, .(grpid), .fun=corr_cal_c)
+    zero_cal<- ddply(assn, "grpid", fun=sub_zero)
+    gain_cal<- ddply(zero_cal, "grpid",fun=fun_gain)
+    correct_c<- ddply(gain_cal, "grpid",.fun=corr_cal_c)
     isotope<- grouprecs(correct_c)}
   l <- list()
   l$isotope<- isotope [order(isotope$DateTime),]
